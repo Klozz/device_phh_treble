@@ -1,3 +1,6 @@
+BUILD_BROKEN_PHONY_TARGETS := true
+BUILD_BROKEN_DUP_RULES := true
+
 #Huawei devices don't declare fingerprint and telephony hardware feature
 #TODO: Proper detection
 PRODUCT_COPY_FILES := \
@@ -8,7 +11,7 @@ PRODUCT_COPY_FILES := \
 
 #Use a more decent APN config
 PRODUCT_COPY_FILES += \
-	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+	device/phh/treble/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/phh/treble/sepolicy
 DEVICE_PACKAGE_OVERLAYS += device/phh/treble/overlay
@@ -70,9 +73,9 @@ PRODUCT_PACKAGES += \
 	vintf \
 
 # Fix Offline Charging on Huawmeme
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
 	huawei-charger
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,device/phh/treble/huawei_charger/files,system/etc/charger)
 
 PRODUCT_COPY_FILES += \
