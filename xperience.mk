@@ -1,6 +1,6 @@
 # Inherit some common XPerience stuff.
 $(call inherit-product, vendor/xperience/config/common_full_phone.mk)
-$(call inherit-product, device/xperience/sepolicy/common/sepolicy.mk)
+#$(call inherit-product, device/xperience/sepolicy/common/sepolicy.mk)
 -include vendor/xperience/build/core/config.mk
 
 IS_XPERIENCE := true
