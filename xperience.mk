@@ -4,3 +4,7 @@ $(call inherit-product, device/qcom/sepolicy/sepolicy.mk)
 -include vendor/xperience/build/core/config.mk
 
 IS_XPERIENCE := true
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
